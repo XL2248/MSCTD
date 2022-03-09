@@ -2,7 +2,7 @@
 The main folder `enzh` contains training/dev/test sets, each of which is made up by the following files ('*' means dev/test/train):
 ```
 ├──enzh
-      └── english_*.txt // each line corresponds to a English dialogue text utterence.
+      └── english_*.txt // each line corresponds to an English dialogue text utterence.
       └── chinese_*.txt // each line corresponds to a Chinese dialogue text utterence, which is paired with the corresponding English utterance.
       └── chinese_*_seg.txt // each line corresponds to a segmented Chinese dialogue text utterence by Stanford CoreNLP toolkit.
       └── img_index_*.txt // each line is an episode of dialogue, which is a list of IDs (staring with 0).     
@@ -18,7 +18,7 @@ The enzh images can be downloaded here (waiting). [enzh_train]() [test]() [valid
 The main folder `ende` contains training/dev/test sets, each of which is made up by the following files ('*' means dev/test/train):
 ```
 ├──ende
-      └── english_*.txt // each line corresponds to a English dialogue text utterence.
+      └── english_*.txt // each line corresponds to an English dialogue text utterence.
       └── german_*.txt // each line corresponds to a German dialogue text utterence, which is paired with the corresponding English utterance.
       └── img_index_*.txt // each line is an episode of dialogue, which is a list of IDs (staring with 0).     
 ```
