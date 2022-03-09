@@ -10,10 +10,10 @@ The main folder `enzh` contains training/dev/test sets, each of which is made up
 The enzh images can be downloaded here (waiting). [enzh_train]() [test]() [valid]()
 
 ```
-      └── *_images // containing images (visual contexts) in which the text utterence takes place, with ID being the image filename (0,1,2, etc)
-            └── 0.jpg
-            └── 1.jpg
-            └── ...
+├── *_images // containing images (visual contexts) in which the text utterence takes place, with ID being the image filename (0,1,2, etc)
+      └── 0.jpg
+      └── 1.jpg
+      └── ...
 ```
 The main folder `ende` contains training/dev/test sets, each of which is made up by the following files ('*' means dev/test/train):
 ```
@@ -24,8 +24,8 @@ The main folder `ende` contains training/dev/test sets, each of which is made up
 ```
 The ende images can be downloaded here. [ende_train]() [test]() [valid]()
 ```
-      └── *_images // containing images (visual contexts) in which the text utterence takes place, with ID being the image filename (0,1,2, etc)
-            └── 0.jpg
-            └── 1.jpg
-            └── ...
+├── *_images // containing images (visual contexts) in which the text utterence takes place, with ID being the image filename (0,1,2, etc)
+      └── 0.jpg
+      └── 1.jpg
+      └── ...
 ```
