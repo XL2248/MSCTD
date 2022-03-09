@@ -1,4 +1,4 @@
-# MSCTD Data
+# MSCTD Raw Data
 The main folder `enzh` contains training/dev/test sets, each of which is made up by the following files ('*' means dev/test/train):
 ```
 ├──enzh
