@@ -1,6 +1,6 @@
 # MSCTD Raw Data
 ## EnZh
-All English utterances in MSCTD are from [OpenViDial](https://github.com/ShannonAI/OpenViDial), which may have been corrected or modified by human. When automatic annotation for enzh, the used English-Chinese subtitles are crawled from [kexiaoguo](https://www.kexiaoguo.com/), which are aligned by several tools, i.e., [Vecalign](https://github.com/thompsonb/vecalign) and [LASER](https://github.com/facebookresearch/LASER)(more details can be found in our paper). Now, the final English-Chinese subtitle database can be downloaded [here](https://drive.google.com/drive/folders/1Hf4Bs_nh3xN-1wzZk8eahWzJ8CLdDqDd?usp=sharing).
+All English utterances in MSCTD are from [OpenViDial](https://github.com/ShannonAI/OpenViDial), which may have been corrected or modified by human. When automatic annotation for enzh, the used English-Chinese subtitles are crawled from [kexiaoguo](https://www.kexiaoguo.com/), which are aligned by several tools, i.e., [Vecalign](https://github.com/thompsonb/vecalign) and [LASER](https://github.com/facebookresearch/LASER) (more details can be found in our paper). Now, the final English-Chinese subtitle database can be downloaded [here](https://drive.google.com/drive/folders/1Hf4Bs_nh3xN-1wzZk8eahWzJ8CLdDqDd?usp=sharing).
 
 The main folder `enzh` contains training/dev/test sets, each of which is made up by the following files ('*' means dev/test/train): 
 ```
