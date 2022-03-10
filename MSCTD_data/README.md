@@ -1,6 +1,6 @@
 # MSCTD Raw Data
 ## EnZh
-The main folder `enzh` contains training/dev/test sets, each of which is made up by the following files ('*' means dev/test/train): Note that all English utterances are from [OpenViDial](https://github.com/ShannonAI/OpenViDial), which may have been corrected or modified by human (more details can be found in our paper).
+The main folder `enzh` contains training/dev/test sets, each of which is made up by the following files ('*' means dev/test/train): Note that all English utterances in MSCTD are from [OpenViDial](https://github.com/ShannonAI/OpenViDial), which may have been corrected or modified by human (more details can be found in our paper).
 ```
 ├──enzh
       └── english_*.txt // each line corresponds to an English dialogue text utterence.
