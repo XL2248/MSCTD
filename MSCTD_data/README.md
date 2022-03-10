@@ -10,7 +10,7 @@ The main folder `enzh` contains training/dev/test sets, each of which is made up
       └── chinese_*.txt // each line corresponds to a Chinese dialogue text utterence, which is paired with the corresponding English utterance.
       └── chinese_*_seg.txt // each line corresponds to a segmented Chinese dialogue text utterence by Stanford CoreNLP toolkit.
       └── img_index_*.txt // each line is an episode of dialogue, which is a list of IDs (staring with 0).     
-      └── sentiment_*.txt //positive: 2，negative: 1，neutral:0
+      └── sentiment_*.txt //positive: 2, negative: 1, and neutral:0
 ```
 The enzh images can be downloaded here (saved by baiduyun(code：mlwe)/google driver). [enzh_train](https://pan.baidu.com/s/1e9jucSaq0i8uBPEvR_F5LQ) [test](https://drive.google.com/file/d/1B9ZFmSTqfTMaqJ15nQDrRNLqBvo-B39W/view?usp=sharing) [dev](https://drive.google.com/file/d/12HM8uVNjFg-HRZ15ADue4oLGFAYQwvTA/view?usp=sharing)
 
@@ -27,7 +27,7 @@ The main folder `ende` contains training/dev/test sets, each of which is made up
       └── english_*.txt // each line corresponds to an English dialogue text utterence.
       └── german_*.txt // each line corresponds to a German dialogue text utterence, which is paired with the corresponding English utterance.
       └── img_index_*.txt // each line is an episode of dialogue, which is a list of IDs (staring with 0).     
-      └── sentiment_*.txt //positive: 2，negative: 1，neutral:0
+      └── sentiment_*.txt //positive: 2, negative: 1, and neutral:0
 ```
 The ende images can be downloaded here (Note that the test and valid are the same file for enzh and ende). [ende_train](https://drive.google.com/file/d/1GAZgPpTUBSfhne-Tp0GDkvSHuq6EMMbj/view?usp=sharing) [test](https://drive.google.com/file/d/1B9ZFmSTqfTMaqJ15nQDrRNLqBvo-B39W/view?usp=sharing) [dev](https://drive.google.com/file/d/12HM8uVNjFg-HRZ15ADue4oLGFAYQwvTA/view?usp=sharing)
 ```
