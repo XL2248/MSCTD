@@ -2,7 +2,7 @@
 Data and codes for the ACL2022 main conference paper [MSCTD: A Multimodal Sentiment Chat Translation Dataset](https://arxiv.org/abs/2202.13645).
 
 # Introduction
-updating..
+Still updating..
 
 # Training (Taking En->De as an example)
 Our code is basically based on the publicly available toolkit: [THUMT-Tensorflow](https://github.com/THUNLP-MT/THUMT) (our python version 3.6).
