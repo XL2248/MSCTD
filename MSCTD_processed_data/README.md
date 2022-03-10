@@ -20,6 +20,6 @@ cd ./ende
 python split_ende.py train
 ```
 ## Image features
-Following this [proceder](https://github.com/ShannonAI/OpenViDial/blob/main/video_dialogue_model/extract_features/extract_features.md), the coarse features extracted by ResNet50 can be downloaded here [CSV features](https://drive.google.com/file/d/1GExHEXCHrImR9EhROP7yzIsG00jBXrCu/view?usp=sharing).
+Following this [procedure](https://github.com/ShannonAI/OpenViDial/blob/main/video_dialogue_model/extract_features/extract_features.md) in [OpenViDial](https://github.com/ShannonAI/OpenViDial), the coarse features extracted by ResNet50 can be downloaded here [CSV features](https://drive.google.com/file/d/1GExHEXCHrImR9EhROP7yzIsG00jBXrCu/view?usp=sharing).
 
-Similarly, following [OpenViDial](https://github.com/ShannonAI/OpenViDial/blob/main/video_dialogue_model/extract_features/extract_features.md), the Fine-grained Object-based Visual features extracted by Faster R-CNN can be downleaded here [FOV features](https://drive.google.com/file/d/1DCdIgBnEJegJnFxL5LPO_PpMtXbNxoIs/view?usp=sharing).
+Similarly, following this [procedure](https://github.com/ShannonAI/OpenViDial/blob/main/video_dialogue_model/extract_features/extract_features.md) in [OpenViDial](https://github.com/ShannonAI/OpenViDial), the Fine-grained Object-based Visual features extracted by Faster R-CNN can be downleaded here [FOV features](https://drive.google.com/file/d/1DCdIgBnEJegJnFxL5LPO_PpMtXbNxoIs/view?usp=sharing).
