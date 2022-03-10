@@ -36,10 +36,10 @@ Required TER: v0.7.25; Sacre-BLEU: version.1.4.13 (BLEU+case.mixed+numrefs.1+smo
 ```
 6) python SacreBLEU_TER_Coherence_Evaluation_code/cal_bleu_ter4ende.py # Please correctly set the golden file and predicted file in this file and in sacrebleu_ende.py, respectively.
 ```
-+ Test by meteor
++ Test by meteor (we used meteor-1.5.)
 
 ```
-7) we used meteor-1.5. java -Xmx2G -jar meteor-*.jar generated_file reference_file -norm -writeAlignments -f system1
+7) java -Xmx2G -jar meteor-*.jar generated_file reference_file -norm -writeAlignments -f system1
 ```
 # Citation
 If you find this project helps, please cite our paper :)
