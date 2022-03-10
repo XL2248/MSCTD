@@ -1,4 +1,4 @@
-# MSCTD Processed Data
+# MSCTD Processed Data/Features
 
 ## bpe_ende/bpe_zhen
 The two folders `bpe_ende/bpe_zhen` contains training/dev/test sets after bpe processing.
