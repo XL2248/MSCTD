@@ -24,7 +24,7 @@ The main folder `ende` contains training/dev/test sets, each of which is made up
       └── german_*.txt // each line corresponds to a German dialogue text utterence, which is paired with the corresponding English utterance.
       └── img_index_*.txt // each line is an episode of dialogue, which is a list of IDs (staring with 0).     
 ```
-The ende images can be downloaded here. [ende_train]() [test](https://drive.google.com/file/d/1B9ZFmSTqfTMaqJ15nQDrRNLqBvo-B39W/view?usp=sharing) [valid](https://drive.google.com/file/d/12HM8uVNjFg-HRZ15ADue4oLGFAYQwvTA/view?usp=sharing)
+The ende images can be downloaded here (Note that the test and valid are the same file for enzh and ende). [ende_train](https://drive.google.com/file/d/1GAZgPpTUBSfhne-Tp0GDkvSHuq6EMMbj/view?usp=sharing) [test](https://drive.google.com/file/d/1B9ZFmSTqfTMaqJ15nQDrRNLqBvo-B39W/view?usp=sharing) [valid](https://drive.google.com/file/d/12HM8uVNjFg-HRZ15ADue4oLGFAYQwvTA/view?usp=sharing)
 ```
 ├── *_images // containing images (visual contexts) in which the text utterence takes place, with ID being the image filename (0,1,2, etc)
       └── 0.jpg
