@@ -1,6 +1,6 @@
 # MSCTD Raw Data
 ## EnZh
-The main folder `enzh` contains training/dev/test sets, each of which is made up by the following files ('*' means dev/test/train):
+The main folder `enzh` contains training/dev/test sets, each of which is made up by the following files ('*' means dev/test/train): Note that all English utterances are from [OpenViDial](https://github.com/ShannonAI/OpenViDial), which may have been corrected or modified by human (more details can be found in our paper).
 ```
 ├──enzh
       └── english_*.txt // each line corresponds to an English dialogue text utterence.
@@ -8,7 +8,7 @@ The main folder `enzh` contains training/dev/test sets, each of which is made up
       └── chinese_*_seg.txt // each line corresponds to a segmented Chinese dialogue text utterence by Stanford CoreNLP toolkit.
       └── img_index_*.txt // each line is an episode of dialogue, which is a list of IDs (staring with 0).     
 ```
-The enzh images can be downloaded here (saved by google driver). [enzh_train]() [test](https://drive.google.com/file/d/1B9ZFmSTqfTMaqJ15nQDrRNLqBvo-B39W/view?usp=sharing) [dev](https://drive.google.com/file/d/12HM8uVNjFg-HRZ15ADue4oLGFAYQwvTA/view?usp=sharing)
+The enzh images can be downloaded here (saved by baiduyun/google driver). [enzh_train]() [test](https://drive.google.com/file/d/1B9ZFmSTqfTMaqJ15nQDrRNLqBvo-B39W/view?usp=sharing) [dev](https://drive.google.com/file/d/12HM8uVNjFg-HRZ15ADue4oLGFAYQwvTA/view?usp=sharing)
 
 ```
 ├── *_images // containing images (visual contexts) in which the text utterence takes place, with ID being the image filename (0,1,2, etc)
