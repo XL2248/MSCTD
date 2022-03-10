@@ -8,7 +8,7 @@ The main folder `enzh` contains training/dev/test sets, each of which is made up
       └── chinese_*_seg.txt // each line corresponds to a segmented Chinese dialogue text utterence by Stanford CoreNLP toolkit.
       └── img_index_*.txt // each line is an episode of dialogue, which is a list of IDs (staring with 0).     
 ```
-The enzh images can be downloaded here (saved by baiduyun/google driver). [enzh_train]() [test](https://drive.google.com/file/d/1B9ZFmSTqfTMaqJ15nQDrRNLqBvo-B39W/view?usp=sharing) [dev](https://drive.google.com/file/d/12HM8uVNjFg-HRZ15ADue4oLGFAYQwvTA/view?usp=sharing)
+The enzh images can be downloaded here (saved by baiduyun(code：mlwe)/google driver). [enzh_train](https://pan.baidu.com/s/1e9jucSaq0i8uBPEvR_F5LQ) [test](https://drive.google.com/file/d/1B9ZFmSTqfTMaqJ15nQDrRNLqBvo-B39W/view?usp=sharing) [dev](https://drive.google.com/file/d/12HM8uVNjFg-HRZ15ADue4oLGFAYQwvTA/view?usp=sharing)
 
 ```
 ├── *_images // containing images (visual contexts) in which the text utterence takes place, with ID being the image filename (0,1,2, etc)
