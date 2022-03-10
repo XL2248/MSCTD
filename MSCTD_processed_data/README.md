@@ -3,7 +3,7 @@
 ## bpe_ende/bpe_zhen
 The two folders `bpe_ende/bpe_zhen` contains training/dev/test sets after bpe processing.
 
-The script `build_sub_dialog_ende.py` in bpe_ende" or `build_sub_dialog.py` in bpe_zhen aims to generate subdialog with context length 3.
+The script `build_sub_dialog_ende.py` in bpe_ende or `build_sub_dialog.py` in bpe_zhen aims to generate subdialog with context length 3.
 For example, you can run this as follows (train/dev/test):
 ```
 cd ./bpe_ende
