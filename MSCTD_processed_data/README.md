@@ -19,6 +19,11 @@ For example, you can run this as follows (train/dev/test):
 cd ./ende
 python split_ende.py train
 ```
+The vocabulary used can be found in corresponding folder (`ende/deen/enzh/zhen`) and you also can generate it by running `build_vocab.py` as follows:
+```
+cd ./ende
+python build_vocab.py training_file ende.bpe32k.vocab4.txt # Note that you need cat train_en.txt and train_de.txt for shared vocabulary for ende.
+```
 ## Image features
 ### CSV
 Following this [procedure](https://github.com/ShannonAI/OpenViDial/blob/main/video_dialogue_model/extract_features/extract_features.md) in [OpenViDial](https://github.com/ShannonAI/OpenViDial), the coarse features extracted by ResNet50 can be downloaded here [CSV features](https://drive.google.com/file/d/1GExHEXCHrImR9EhROP7yzIsG00jBXrCu/view?usp=sharing).
