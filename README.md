@@ -122,4 +122,4 @@ If you find this project helps, please cite our paper :)
 }
 ```
 
-Please feel free to open an issue or email me (yunlonliang[at]gmail.com) for questions and suggestions.
+Please feel free to open an issue or email me (yunlonliang@gmail.com) for questions and suggestions.
