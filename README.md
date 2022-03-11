@@ -10,14 +10,14 @@ The following steps are training our model and then test its performance in term
 
 ## Only text-based models
 
-+ Training M1 (Trans.) and test
++ Training M1 (Trans.) and test, [checkpoint](), and [output]()
 
 ```
 1) bash train_zh2en_share_base.sh # Suppose the generated checkpoint file is located in M1_path1
 2) bash test_zhen_m1.sh checkpoint_name checkpoint_step test
 ```
 
-+ Training M2 (TCT) and test
++ Training M2 (TCT) and test, [checkpoint](), and [output]()
 
 ```
 1) bash pretrain_train_tct.sh 1 1 # Here, set the training_step=1; Suppose the generated checkpoint file is located in path2
@@ -26,7 +26,7 @@ The following steps are training our model and then test its performance in term
 4) bash test_zhen_tct.sh False False False checkpoint_name checkpoint_step test
 ```
 
-+ Training M3 (CA-TCT) and test
++ Training M3 (CA-TCT) and test, [checkpoint](), and [output]()
 
 ```
 1) bash pretrain_train_ca_tct.sh 1 1 # Here, set the training_step=1; Suppose the generated checkpoint file is located in path2
@@ -36,20 +36,20 @@ The following steps are training our model and then test its performance in term
 ```
 
 ## (T+CSV)-based models
-+ Training M5 (Trans.+Sum) and test
++ Training M5 (Trans.+Sum) and test, [checkpoint](), and [output]()
 
 ```
 1) bash train_multimodal_coarse_sum.sh 
 2) bash test_zhen_coarse_sum.sh checkpoint_name checkpoint_step test # note that when testing you should set the "trainable=True" in Line206 of src_code/c-thumt-sum/thumt/models/transformer.py, to load the image feature.
 ```
 
-+ Training M6 (Trans.+Att) and test
++ Training M6 (Trans.+Att) and test, [checkpoint](), and [output]()
 
 ```
 1) bash train_multimodal_coarse_att.sh  # Suppose the generated checkpoint file is located in M6_path1
 2) bash test_zhen_coarse_att.sh checkpoint_name checkpoint_step test # note that when testing you should set the "trainable=True" in Line206 of src_code/c-thumt-sum/thumt/models/transformer.py, to load the image feature.
 ```
-+ Training M7 (MCT) and test
++ Training M7 (MCT) and test, [checkpoint](), and [output]()
 
 ```
 1) bash pretrain_coarse_mct.sh 1 1 # Here, set the training_step=1; Suppose the generated checkpoint file is located in path2
@@ -58,7 +58,7 @@ The following steps are training our model and then test its performance in term
 4) bash test_zhen_coarse_mct.sh False False False checkpoint_name checkpoint_step test  # note that when testing you should set the "trainable=True" in Line407 of src_code/thumt-dialog-wo-sp-decoder-w-mask-all-mlp-four-coarse-nct-att2/thumt/models/transformer.py, to load the image feature.
 ```
 
-+ Training M8 (CA-MCT) and test
++ Training M8 (CA-MCT) and test, [checkpoint](), and [output]()
 
 ```
 1) bash pretrain_coarse_ca_mct.sh 1 1 # Here, set the training_step=1; Suppose the generated checkpoint file is located in path2
@@ -68,19 +68,19 @@ The following steps are training our model and then test its performance in term
 ```
 
 ## (T+FOV)-based models
-+ Training M9 (Trans.+Con) and test
++ Training M9 (Trans.+Con) and test, [checkpoint](), and [output]()
 
 ```
 1) bash train_multimodal_fine_con_new.sh 
 2) bash test_zhen_fine_con.sh.sh checkpoint_name checkpoint_step test 
 ```
-+ Training M11 (M-Trans.) and test
++ Training M11 (M-Trans.) and test, [checkpoint](), and [output]()
 
 ```
 1) bash train_multimodal_fine_m.sh   # Suppose the generated checkpoint file is located in M11_path1
 2) bash test_zhen_fine_m.sh checkpoint_name checkpoint_step test 
 ```
-+ Training M12 (MCT) and test
++ Training M12 (MCT) and test, [checkpoint](), and [output]()
 
 ```
 1) bash pretrain_train_mct.sh 1 1 # Here, set the training_step=1; Suppose the generated checkpoint file is located in path2
@@ -89,7 +89,7 @@ The following steps are training our model and then test its performance in term
 4) bash test_zhen_fine_mct.sh False False False checkpoint_name checkpoint_step test  
 ```
 
-+ Training M13 (CA-MCT) and test
++ Training M13 (CA-MCT) and test, [checkpoint](), and [output]()
 
 ```
 1) bash pretrain_train_ca_mct.sh 1 1 # Here, set the training_step=1; Suppose the generated checkpoint file is located in path2
