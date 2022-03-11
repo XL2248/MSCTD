@@ -4,30 +4,101 @@ Data and code for the ACL2022 main conference paper [MSCTD: A Multimodal Sentime
 # Introduction
 Still updating..
 
-# Training (Taking En->De as an example)
+# Training (Taking Zh->En as an example)
 Our code is basically based on the publicly available toolkit: [THUMT-Tensorflow](https://github.com/THUNLP-MT/THUMT) (our python version 3.6).
-The following steps are training our model and then test its performance in terms of BLEU, TER, and Sentence Similarity.
+The following steps are training our model and then test its performance in terms of BLEU, METEOR, and TER.
 
-## Two-stage Training
+## Only text-based models
 
-+ The first stage
-
-```
-1) bash train_ende_base_stage1.sh # Suppose the generated checkpoint file is located in path1
-```
-+ The second stage (i.e., fine-tuning on the chat translation data)
++ Training M1 (Trans.) and test
 
 ```
-2) bash train_ende_base_stage2.sh # Here, set the training_step=1; Suppose the generated checkpoint file is located in path2
-3) python thumt_stage1_code/thumt/scripts/combine_add.py --model path2 --part path1 --output path3  # copy the weight of the first stage to the second stage.
-4) bash train_ende_base_stage2.sh # Here, set the --output=path3 and the training_step=first_stage_step + 5,000; Suppose the generated checkpoint file is path4
+1) bash train_zh2en_share_base.sh # Suppose the generated checkpoint file is located in path1
+2) bash test_zhen_m1.sh checkpoint_name checkpoint_step test
 ```
-+ Test by multi-blue.perl
+
++ Training M2 (TCT) and test
 
 ```
-5) bash test_ende_stage2.sh # set the checkpoint file path to path4 in this script. # Suppose the predicted file is located in path5 at checkpoint step xxxxx
+1) bash pretrain_train_tct.sh 1 1 # Here, set the training_step=1; Suppose the generated checkpoint file is located in path2
+2) python thumt1_code/thumt/scripts/combine_add.py --model path2 --part path1 --output path3  # copy the weight of the first stage to the second stage.
+3) bash pretrain_train_tct.sh # Here, set the --output=path3 and the training_step=first_stage_step + 5,000; Suppose the generated checkpoint file is path4
+4) bash test_zhen_m1.sh checkpoint_name checkpoint_step test
 ```
-+ Test by SacreBLEU and TER
+
++ Training M3 (CA-TCT) and test
+
+```
+1) bash pretrain_train_ca_tct.sh 1 1 # Here, set the training_step=1; Suppose the generated checkpoint file is located in path2
+2) python thumt1_code/thumt/scripts/combine_add.py --model path2 --part path1 --output path3  # copy the weight of the first stage to the second stage.
+3) bash pretrain_train_ca_tct.sh # Here, set the --output=path3 and the training_step=first_stage_step + 5,000; Suppose the generated checkpoint file is path4
+4) bash test_zhen_m1.sh checkpoint_name checkpoint_step test
+```
+
+## (T+CSV)-based models
++ Training M5 (Trans.+Sum) and test
+
+```
+1) bash train_multimodal_coarse_sum.sh 
+2) bash test_zhen_coarse_sum.sh checkpoint_name checkpoint_step test # note that when testing you should set the "trainable=True" in Line206 of src_code/c-thumt-sum/thumt/models/transformer.py, to load the image feature.
+```
+
++ Training M6 (Trans.+Att) and test
+
+```
+1) bash train_multimodal_coarse_att2.sh 
+2) bash test_zhen_coarse_sum.sh checkpoint_name checkpoint_step test # note that when testing you should set the "trainable=True" in Line206 of src_code/c-thumt-sum/thumt/models/transformer.py, to load the image feature.
+```
++ Training M7 (MCT) and test
+
+```
+1) bash pretrain_train_ca_tct.sh 1 1 # Here, set the training_step=1; Suppose the generated checkpoint file is located in path2
+2) python thumt1_code/thumt/scripts/combine_add.py --model path2 --part path1 --output path3  # copy the weight of the first stage to the second stage.
+3) bash pretrain_train_ca_tct.sh # Here, set the --output=path3 and the training_step=first_stage_step + 5,000; Suppose the generated checkpoint file is path4
+4) bash test_zhen_m1.sh checkpoint_name checkpoint_step test
+```
+
++ Training M8 (CA-MCT) and test
+
+```
+1) bash pretrain_train_ca_tct.sh 1 1 # Here, set the training_step=1; Suppose the generated checkpoint file is located in path2
+2) python thumt1_code/thumt/scripts/combine_add.py --model path2 --part path1 --output path3  # copy the weight of the first stage to the second stage.
+3) bash pretrain_train_ca_tct.sh # Here, set the --output=path3 and the training_step=first_stage_step + 5,000; Suppose the generated checkpoint file is path4
+4) bash test_zhen_m1.sh checkpoint_name checkpoint_step test
+```
+
+## (T+FOV)-based models
++ Training M9 (Trans.+Con) and test
+
+```
+1) bash train_multimodal_fine_con_new.sh 
+2) bash test_zhen_fine_con.sh.sh checkpoint_name checkpoint_step test 
+```
++ Training M11 (M-Trans.) and test
+
+```
+1) bash train_multimodal_fine_m.sh 
+2) bash test_zhen_fine_m.sh checkpoint_name checkpoint_step test 
+```
++ Training M12 (MCT) and test
+
+```
+1) bash pretrain_train_ca_tct.sh 1 1 # Here, set the training_step=1; Suppose the generated checkpoint file is located in path2
+2) python thumt1_code/thumt/scripts/combine_add.py --model path2 --part path1 --output path3  # copy the weight of the first stage to the second stage.
+3) bash pretrain_train_ca_tct.sh # Here, set the --output=path3 and the training_step=first_stage_step + 5,000; Suppose the generated checkpoint file is path4
+4) bash test_zhen_m1.sh checkpoint_name checkpoint_step test
+```
+
++ Training M13 (CA-MCT) and test
+
+```
+1) bash pretrain_train_ca_tct.sh 1 1 # Here, set the training_step=1; Suppose the generated checkpoint file is located in path2
+2) python thumt1_code/thumt/scripts/combine_add.py --model path2 --part path1 --output path3  # copy the weight of the first stage to the second stage.
+3) bash pretrain_train_ca_tct.sh # Here, set the --output=path3 and the training_step=first_stage_step + 5,000; Suppose the generated checkpoint file is path4
+4) bash test_zhen_m1.sh checkpoint_name checkpoint_step test
+```
+
+## Test by SacreBLEU, TER, and Meteor
 Required TER: v0.7.25; Sacre-BLEU: version.1.4.13 (BLEU+case.mixed+numrefs.1+smooth.exp+tok.13a+version.1.4.13)
 
 ```
@@ -38,6 +109,7 @@ Required TER: v0.7.25; Sacre-BLEU: version.1.4.13 (BLEU+case.mixed+numrefs.1+smo
 ```
 7) java -Xmx2G -jar meteor-*.jar generated_file reference_file -norm -writeAlignments -f system1
 ```
+
 # Citation
 If you find this project helps, please cite our paper :)
 
