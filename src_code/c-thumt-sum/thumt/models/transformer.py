@@ -17,8 +17,10 @@ from thumt.models.model import NMTModel
 
 def _load_embedding(mode, params, uniform_scale = 0.25, dimension_size = 300, embed_file='glove'):
     n = 0
-#    word_vectors = np.memmap("/path/to/coarse_features/all.features.mmap", mode="r", dtype=np.float32, shape=(142871, 1000))
-    word_vectors = np.memmap("/path/to/coarse_features/all.ende.features.mmap", mode="r", dtype=np.float32, shape=(30370, 1000))
+    # for zh->en
+    word_vectors = np.memmap("/path/to/coarse_features/all.features.mmap", mode="r", dtype=np.float32, shape=(142871, 1000))
+    # for en->zh
+    #word_vectors = np.memmap("/path/to/coarse_features/all.ende.features.mmap", mode="r", dtype=np.float32, shape=(30370, 1000))
     return np.array(word_vectors, dtype=np.float32)
 
 def _layer_process(x, mode):
