@@ -2,7 +2,7 @@
 Data and code for the ACL2022 main conference paper [MSCTD: A Multimodal Sentiment Chat Translation Dataset](https://arxiv.org/abs/2202.13645).
 
 # Introduction
-Multimodal machine translation and textual chat translation have received considerable attention in recent years. Although the conversation in its natural form is usually multimodal, there still lacks work on multimodal machine translation in conversations. In this work, we introduce a new task named \textbf{M}ultimodal \textbf{C}hat \textbf{T}ranslation (MCT), aiming to generate more accurate translations with the help of the associated dialogue history and visual context. To this end, we firstly construct a \textbf{M}ultimodal \textbf{S}entiment \textbf{C}hat \textbf{T}ranslation \textbf{D}ataset (MSCTD) containing 142,871 English-Chinese utterance pairs in 14,762 bilingual dialogues and 30,370 English-German utterance pairs in 3,079 bilingual dialogues. Each utterance pair, corresponding to the visual context that reflects the current conversational scene, is annotated with a sentiment label. Then, we benchmark the task by establishing multiple baseline systems that incorporate multimodal and sentiment features for MCT. Preliminary experiments on four language directions (English$\leftrightarrow$Chinese and English$\leftrightarrow$German) verify the potential of contextual and multimodal information fusion and the positive impact of sentiment on the MCT task. Additionally, as a by-product of the MSCTD, it also provides two new benchmarks on multimodal dialogue sentiment analysis. Our work can facilitate research on both multimodal chat translation and multimodal dialogue sentiment analysis. An example is shown as below:
+Multimodal machine translation and textual chat translation have received considerable attention in recent years. Although the conversation in its natural form is usually multimodal, there still lacks work on multimodal machine translation in conversations. In this work, we introduce a new task named Multimodal Chat Translation (MCT), aiming to generate more accurate translations with the help of the associated dialogue history and visual context. To this end, we firstly construct a Multimodal Sentiment Chat Translation Dataset (MSCTD) containing 142,871 English-Chinese utterance pairs in 14,762 bilingual dialogues and 30,370 English-German utterance pairs in 3,079 bilingual dialogues. Each utterance pair, corresponding to the visual context that reflects the current conversational scene, is annotated with a sentiment label. Then, we benchmark the task by establishing multiple baseline systems that incorporate multimodal and sentiment features for MCT. Preliminary experiments on four language directions (English-Chinese and English-German) verify the potential of contextual and multimodal information fusion and the positive impact of sentiment on the MCT task. Additionally, as a by-product of the MSCTD, it also provides two new benchmarks on multimodal dialogue sentiment analysis. Our work can facilitate research on both multimodal chat translation and multimodal dialogue sentiment analysis. An example is shown as below:
 ![avatar](example_py.png)
 # Training (Taking Zh->En as an example)
 Our code is basically based on the publicly available toolkit: [THUMT-Tensorflow](https://github.com/THUNLP-MT/THUMT) (our python version 3.6).
@@ -36,20 +36,20 @@ The following steps are training our model and then test its performance in term
 ```
 
 ## (T+CSV)-based models
-+ Training M5 (Trans.+Sum) and test, [checkpoint](), and [output]()
++ Training M5 (Trans.+Sum) and test
 
 ```
 1) bash train_multimodal_coarse_sum.sh 
 2) bash test_zhen_coarse_sum.sh checkpoint_name checkpoint_step test # note that when testing you should set the "trainable=True" in Line206 of src_code/c-thumt-sum/thumt/models/transformer.py, to load the image feature.
 ```
 
-+ Training M6 (Trans.+Att) and test, [checkpoint](), and [output]()
++ Training M6 (Trans.+Att) and test
 
 ```
 1) bash train_multimodal_coarse_att.sh  # Suppose the generated checkpoint file is located in M6_path1
 2) bash test_zhen_coarse_att.sh checkpoint_name checkpoint_step test # note that when testing you should set the "trainable=True" in Line206 of src_code/c-thumt-sum/thumt/models/transformer.py, to load the image feature.
 ```
-+ Training M7 (MCT) and test, [checkpoint](), and [output]()
++ Training M7 (MCT) and test
 
 ```
 1) bash pretrain_coarse_mct.sh 1 1 # Here, set the training_step=1; Suppose the generated checkpoint file is located in path2
@@ -58,7 +58,7 @@ The following steps are training our model and then test its performance in term
 4) bash test_zhen_coarse_mct.sh False False False checkpoint_name checkpoint_step test  # note that when testing you should set the "trainable=True" in Line407 of src_code/thumt-dialog-wo-sp-decoder-w-mask-all-mlp-four-coarse-nct-att2/thumt/models/transformer.py, to load the image feature.
 ```
 
-+ Training M8 (CA-MCT) and test, [checkpoint](), and [output]()
++ Training M8 (CA-MCT) and test
 
 ```
 1) bash pretrain_coarse_ca_mct.sh 1 1 # Here, set the training_step=1; Suppose the generated checkpoint file is located in path2
@@ -68,13 +68,13 @@ The following steps are training our model and then test its performance in term
 ```
 
 ## (T+FOV)-based models
-+ Training M9 (Trans.+Con) and test, [checkpoint](), and [output]()
++ Training M9 (Trans.+Con) and test
 
 ```
 1) bash train_multimodal_fine_con_new.sh 
 2) bash test_zhen_fine_con.sh.sh checkpoint_name checkpoint_step test 
 ```
-+ Training M11 (M-Trans.) and test, [checkpoint](), and [output]()
++ Training M11 (M-Trans.) and test
 
 ```
 1) bash train_multimodal_fine_m.sh   # Suppose the generated checkpoint file is located in M11_path1
