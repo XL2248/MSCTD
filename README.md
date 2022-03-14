@@ -6,7 +6,7 @@ Multimodal machine translation and textual chat translation have received consid
 
 An example is shown as below:
 ![avatar](example_py.png)
-# Training (Taking Zh->En as an example)
+# Usage (Taking Zh->En as an example)
 Our code is basically based on the publicly available toolkit: [THUMT-Tensorflow](https://github.com/THUNLP-MT/THUMT) (our python version 3.6).
 The following steps are training our model and then test its performance in terms of BLEU, METEOR, and TER.
 
