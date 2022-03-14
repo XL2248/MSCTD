@@ -10,16 +10,16 @@ An example is shown as below:
 Our code is basically based on the publicly available toolkit: [THUMT-Tensorflow](https://github.com/THUNLP-MT/THUMT) (our python version 3.6).
 The following steps are training our model and then test its performance in terms of BLEU, METEOR, and TER.
 
-## Only text-based models
+## Only text-based methods
 
-+ Training M1 (Trans.) and test, [checkpoint](), and [output]()
++ Training M1 (Trans.) and test
 
 ```
 1) bash train_zh2en_share_base.sh # Suppose the generated checkpoint file is located in M1_path1
 2) bash test_zhen_m1.sh checkpoint_name checkpoint_step test
 ```
 
-+ Training M2 (TCT) and test, [checkpoint](), and [output]()
++ Training M2 (TCT) and test
 
 ```
 1) bash pretrain_train_tct.sh 1 1 # Here, set the training_step=1; Suppose the generated checkpoint file is located in path2
@@ -28,7 +28,7 @@ The following steps are training our model and then test its performance in term
 4) bash test_zhen_tct.sh False False False checkpoint_name checkpoint_step test
 ```
 
-+ Training M3 (CA-TCT) and test, [checkpoint](), and [output]()
++ Training M3 (CA-TCT) and test
 
 ```
 1) bash pretrain_train_ca_tct.sh 1 1 # Here, set the training_step=1; Suppose the generated checkpoint file is located in path2
@@ -37,7 +37,7 @@ The following steps are training our model and then test its performance in term
 4) bash test_zhen_tct.sh True True True checkpoint_name checkpoint_step test
 ```
 
-## (T+CSV)-based models
+## (T+CSV)-based methods
 + Training M5 (Trans.+Sum) and test
 
 ```
@@ -69,7 +69,7 @@ The following steps are training our model and then test its performance in term
 4) bash test_zhen_coarse_mct.sh True True True checkpoint_name checkpoint_step test  # note that when testing you should set the "trainable=True" in Line407 of src_code/thumt-dialog-wo-sp-decoder-w-mask-all-mlp-four-coarse-nct-att2/thumt/models/transformer.py, to load the image feature.
 ```
 
-## (T+FOV)-based models
+## (T+FOV)-based methods
 + Training M9 (Trans.+Con) and test
 
 ```
