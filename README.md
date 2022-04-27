@@ -115,7 +115,7 @@ The following steps are training our model and then test its performance in term
 + Test by meteor for Chinese (we used meteor-1.5.). 
 
 ```
-3) python SacreBLEU_TER_Coherence_Evaluation_code/cal_meteor_score_enzh.py path_of_generated_file start_step end_step # Note that we first transform character-level Chinese to specifical English word (e.g., word1, word2, ... refer to SacreBLEU_TER_Coherence_Evaluation_code/transform_to_enchar.py) and then we utilize the above command (2) to calculate meteor.
+3) python SacreBLEU_TER_Coherence_Evaluation_code/cal_meteor_score_enzh.py path_of_generated_file start_step end_step # Note that we first transform character-level Chinese to special English word (e.g., word1, word2, ... refer to SacreBLEU_TER_Coherence_Evaluation_code/transform_to_enchar.py) and then we utilize the above command (2) to calculate meteor.
 ```
 
 # Citation
