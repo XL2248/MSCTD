@@ -1,5 +1,5 @@
 # MSCTD
-Data and code for the ACL2022 main conference paper [MSCTD: A Multimodal Sentiment Chat Translation Dataset](https://arxiv.org/abs/2202.13645).
+Data and code for the ACL2022 main conference paper [MSCTD: A Multimodal Sentiment Chat Translation Dataset](https://aclanthology.org/2022.acl-long.186/).
 
 # Introduction
 Multimodal machine translation and textual chat translation have received considerable attention in recent years. Although the conversation in its natural form is usually multimodal, there still lacks work on multimodal machine translation in conversations. In this work, we introduce a new task named Multimodal Chat Translation (MCT), aiming to generate more accurate translations with the help of the associated dialogue history and visual context. To this end, we firstly construct a Multimodal Sentiment Chat Translation Dataset (MSCTD) containing 142,871 English-Chinese utterance pairs in 14,762 bilingual dialogues and 30,370 English-German utterance pairs in 3,079 bilingual dialogues. Each utterance pair, corresponding to the visual context that reflects the current conversational scene, is annotated with a sentiment label. Then, we benchmark the task by establishing multiple baseline systems that incorporate multimodal and sentiment features for MCT. Preliminary experiments on four language directions (English-Chinese and English-German) verify the potential of contextual and multimodal information fusion and the positive impact of sentiment on the MCT task. Additionally, as a by-product of the MSCTD, it also provides two new benchmarks on multimodal dialogue sentiment analysis. We hope it can also facilitate research on both multimodal chat translation and multimodal dialogue sentiment analysis. 
@@ -122,12 +122,22 @@ The following steps are training our model and then test its performance in term
 If you find this project helps, please cite our paper :)
 
 ```
-@article{liang2022msctd,
-  title={MSCTD: A Multimodal Sentiment Chat Translation Dataset},
-  author={Liang, Yunlong and Meng, Fandong and Xu, Jinan and Chen, Yufeng and Zhou, Jie},
-  journal={arXiv preprint arXiv:2202.13645},
-  year={2022}
-}
+@inproceedings{liang-etal-2022-msctd,
+    title = "{MSCTD}: A Multimodal Sentiment Chat Translation Dataset",
+    author = "Liang, Yunlong  and
+      Meng, Fandong  and
+      Xu, Jinan  and
+      Chen, Yufeng  and
+      Zhou, Jie",
+    booktitle = "Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+    month = may,
+    year = "2022",
+    address = "Dublin, Ireland",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2022.acl-long.186",
+    doi = "10.18653/v1/2022.acl-long.186",
+    pages = "2601--2613",
+    }
 ```
 
 Please feel free to open an issue or email me (yunlonliang@gmail.com) for questions and suggestions.
