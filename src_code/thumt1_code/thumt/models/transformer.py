@@ -233,7 +233,7 @@ def decoding_graph(features, state, mode, params):
     if params.shared_source_target_embedding:
         with tf.variable_scope(tf.get_variable_scope(), reuse=True):
             tgt_embedding = tf.get_variable("weights",
-                                            [tgt_vocab_size, hidden_size],
+                                            [src_vocab_size, hidden_size],
                                             initializer=initializer)
     else:
         tgt_embedding = tf.get_variable("target_embedding",
