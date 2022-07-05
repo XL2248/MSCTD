@@ -228,6 +228,8 @@ def decoding_graph(features, state, mode, params):
     hidden_size = params.hidden_size
     tvocab = params.vocabulary["target"]
     tgt_vocab_size = len(tvocab)
+    svocab = params.vocabulary["source"]
+    src_vocab_size = len(svocab)
     initializer = tf.random_normal_initializer(0.0, params.hidden_size ** -0.5)
 
     if params.shared_source_target_embedding:
